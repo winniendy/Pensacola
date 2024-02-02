@@ -1,5 +1,5 @@
 # Pensacola
-A Nextflow pipeline to analyze NGS data of Candida auris from PacBio 
+A Nextflow pipeline to analyze Candida auris data from PacBio sequencing. 
 
 ## Prerequisites
 Nextflow is needed. The detail of installation can be found in https://github.com/nextflow-io/nextflow. For HiPerGator users, its installation is not needed. 
