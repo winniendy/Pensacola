@@ -26,6 +26,6 @@ PacBio SMRTLINK stand-alone tools are needed. About how to install them, please 
 3. open file "params.yaml", set the three parameters absolute paths. They should be ".../.../pbbams",  ".../.../output", and ".../.../reference" . 
 4. get to the top directory of the pipeline, run 
 ```bash
-sbatch ./sbatch candidapb.sh
+sbatch ./candidapb.sh
 ```
 #### Note: If you want to get email notification when the pipeline running ends, please input your email address in the line "#SBATCH --mail-user=<EMAIL>" in the batch file that you will run (namely, candidapb.sh). 
