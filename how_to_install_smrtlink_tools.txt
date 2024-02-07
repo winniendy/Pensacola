@@ -18,6 +18,6 @@ For permanently adding the directory, you need:
 1) move to your home directory, such as "/home/<your name>"
 2) open .bash_profile
 3) add smrtlinkcmds directory in the end of PATH commandline, and then export PATH. For example:
-        PATH=$PATH:$HOME/bin:/blue/bphl-florida/share/smrtlink_11/smrtlink_11/install/smrtlink-release_11.0.0.146107/bundles/smrttools/install/smrttools-release_11.0.0.146107/smrtcmds/bin
+        PATH=$PATH:/blue/bphl-florida/share/smrtlink_11/smrtlink_11/install/smrtlink-release_11.0.0.146107/bundles/smrttools/install/smrttools-release_11.0.0.146107/smrtcmds/bin
         export PATH
 
