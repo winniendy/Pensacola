@@ -1,13 +1,13 @@
 #!/usr/bin/bash
 #SBATCH --account=bphl-umbrella
 #SBATCH --qos=bphl-umbrella
-#SBATCH --job-name=CandidaPB
+#SBATCH --job-name=Pensacola
 #SBATCH --ntasks=1
 #SBATCH --cpus-per-task=10
 #SBATCH --mem=500gb
 #SBATCH --time=48:00:00
-#SBATCH --output=sanibelpb.%j.out
-#SBATCH --error=sanibelpb.err
+#SBATCH --output=pensacola.%j.out
+#SBATCH --error=pensacola.err
 #SBATCH --mail-user=<EMAIL>
 #SBATCH --mail-type=FAIL,END
 
