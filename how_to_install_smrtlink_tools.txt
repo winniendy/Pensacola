@@ -12,17 +12,26 @@ a. Download SMRT Link v11.0 from PacBio website (https://www.pacb.com/support/so
 b. Unzip and Install the software to your location:
                   ./smrtlink_11.0.0.146107.run --rootdir ./smrtlink_11 --smrttools-only
 
-c. Optional, add smrtlink bin directory (including all smrtlink commands) in $PATH. 
-d. test if the command "pbmm2" working in command line.
+c. Optional, add smrtlink bin directory (including all smrtlink commands) in $PATH.
+    For temporarily adding the directory, run the command below in your terminal:
+           export PATH=$PATH:/<path to smrtcmds bin direcotry>/smrtcmds/bin
+    For permanently adding the directory, you need:
+           1) move to your home directory, such as "/home/<your name>"
+           2) open .bash_profile
+           3) add smrtlinkcmds directory in the end of PATH commandline, and then export PATH. For example:
+                  PATH=$PATH:/<path to smrtcmds bin direcotry>/smrtcmds/bin
+                  export PATH
+d. test if the command "pbmm2" working in your terminal.
 
 Option 2: for HiperGator bphl-florida users
-SMRT Link is already installed in /blue/bphl-florida/share/smrtlink_11. If you want to use its commands, the only thing needed to do is to add the SMRT LINK commands (smrtlinkcmds) directory in your $PATH.
+SMRT Link is already installed in /blue/bphl-florida/share/smrtlink_11. If you want to use its commands, the only thing needed to do is to add the SMRT LINK commands (smrtlinkcmds) bin directory in your $PATH.
 For temporarily adding the directory, run the command below in your terminal:
       export PATH=$PATH:/blue/bphl-florida/share/smrtlink_11/smrtlink_11/install/smrtlink-release_11.0.0.146107/bundles/smrttools/install/smrttools-release_11.0.0.146107/smrtcmds/bin
 For permanently adding the directory, you need:
-1) move to your home directory, such as "/home/<your name>"
-2) open .bash_profile
-3) add smrtlinkcmds directory in the end of PATH commandline, and then export PATH. For example:
-        PATH=$PATH:/blue/bphl-florida/share/smrtlink_11/smrtlink_11/install/smrtlink-release_11.0.0.146107/bundles/smrttools/install/smrttools-release_11.0.0.146107/smrtcmds/bin
-        export PATH
+      1) move to your home directory, such as "/home/<your name>"
+      2) open .bash_profile
+      3) add smrtlinkcmds directory in the end of PATH commandline, and then export PATH. For example:
+             PATH=$PATH:/blue/bphl-florida/share/smrtlink_11/smrtlink_11/install/smrtlink-release_11.0.0.146107/bundles/smrttools/install/smrttools-release_11.0.0.146107/smrtcmds/bin
+             export PATH
+      4) save changes and exit the file .bash_profile
 
