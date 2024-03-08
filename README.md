@@ -1,5 +1,5 @@
 # Pensacola
-A Nextflow pipeline to analyze Candida auris long-sequencing data from PacBio. 
+A Nextflow pipeline to analyze *Candida auris* long-sequencing data from PacBio. The QC, species identification and species abundance of a sample, SNP calling and annotation, *etc* are included in the pipeline.  
 
 ## Prerequisites
 Nextflow is needed. The detail of installation can be found in https://github.com/nextflow-io/nextflow. For HiPerGator users, its installation is not needed. 
@@ -25,8 +25,8 @@ The Kraken2/Bracken Refseq index--PlusPF is needed. Please download PlusPF index
    ```
 
 ## Reference
-In this pipeline, the latest genome annotation of Candida.auris strain B8441 is used as the reference. They are available from http://www.candidagenome.org/download/sequence/C_auris_B8441/current/.
-If you want to use another Candida.auris strain as the reference in the pipeline, please refer to the guide "How to build custom snpeff database using snpeff docker image in the pipeline.txt" in the pipeline.
+1. In this pipeline, the latest genome annotation of *Candida.auris* strain B8441 is used as the reference. They are available from http://www.candidagenome.org/download/sequence/C_auris_B8441/current/.
+2. If you want to use another *Candida.auris* strain as the reference in the pipeline, please refer to the guide "How to build custom snpeff database using snpeff docker image in the pipeline.txt" in the pipeline.
 
 ## How to run
 
@@ -45,6 +45,6 @@ If you want to use another Candida.auris strain as the reference in the pipeline
 
 4. get to the top directory of the pipeline, run 
 ```bash
-sbatch ./candidapb.sh
+sbatch ./pensacola.sh
 ```
-#### Note1: If you want to get email notification when the pipeline running ends, please input your email address in the line "#SBATCH --mail-user=<EMAIL>" in the batch file that you will run (namely, candidapb.sh). 
+#### Note1: If you want to get email notification when the pipeline running ends, please input your email address in the line "#SBATCH --mail-user=<EMAIL>" in the batch file that you will run (namely, pensacola.sh). 
