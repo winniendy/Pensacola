@@ -10,8 +10,8 @@ process pbsmrtlink {
    """  
    
    mkdir -p ${params.output}/variants
-   mkdir -p ${params.output}/${x}
-   cp ${params.input}/${x}.bam ${params.output}/${x}
+   #mkdir -p ${params.output}/${x}
+   #cp ${params.input}/${x}.bam ${params.output}/${x}
    #cp ${params.input}/${x}.bam.pbi ${params.output}/${x}
 
    
