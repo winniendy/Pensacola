@@ -33,15 +33,15 @@ The Kraken2/Bracken Refseq index--PlusPF is needed. Please download PlusPF index
 1. Rename your data files and make them looks like "bc2024bc2024.bam.pbi" and "bc2024bc2024.bam". You can use to the script "rename.sh" in the pipeline to rename your data files.
 2. put the renamed data files (*.bam and *.bam.pbi) into the directory /pbbams.
 3. open file "params.yaml", set the full paths of the parameters.   
-   input : the full path to pbbams dir of the pipeline in your computer. It looks like "/<the full path to the pipeline dir in your computer>/pbbams".    
-   output : the full path to output dir of the pipeline in your computer. It looks like "/<the full path to the pipeline dir in your computer>/output".            
-   reference : the full path to reference dir of the pipeline in your computer. It looks like "/<the full path to the pipeline dir in your computer>/reference".    
-   snpeffconfig : the full path to configs dir of the pipeline in your computer. It looks like "/<the full path to the pipeline dir in your computer>/configs".      
+   input : the full path to pbbams dir of the pipeline in your computer. It looks like "/\<the full path to the pipeline dir in your computer\>/pbbams".    
+   output : the full path to output dir of the pipeline in your computer. It looks like "/\<the full path to the pipeline dir in your computer\>/output".            
+   reference : the full path to reference dir of the pipeline in your computer. It looks like "/\<the full path to the pipeline dir in your computer\>/reference".    
+   snpeffconfig : the full path to configs dir of the pipeline in your computer. It looks like "/\<the full path to the pipeline dir in your computer\>/configs".      
           
-   db : the full path to kraken/bracken-database (PlusPF) in your computer. It looks like "/<the full path to the parent dir of PlusPF foler in your computer>/PlusPF".    
-   qc : the full path to LongQC dir in your computer. It looks like "/<the full path to the parent dir of LongQC foler in your computer>/LongQC".     
+   db : the full path to kraken/bracken-database (PlusPF) in your computer. It looks like "/\<the full path to the parent dir of PlusPF foler in your computer\>/PlusPF".    
+   qc : the full path to LongQC dir in your computer. It looks like "/\<the full path to the parent dir of LongQC foler in your computer\>/LongQC".     
            
-   Note: For HiperGator users, the parameters "db" and "qc" do not need to be changed.      
+   Note: For HiperGator users, the parameters "db" and "qc" do not need to be changed. Just keep default settings.     
 
 4. get to the top directory of the pipeline, run 
 ```bash
