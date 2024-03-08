@@ -1,0 +1,50 @@
+How to build a custom snpeff database using snpeff docker image in the pipeline:
+
+1. Get reference datasets:
+   (such as http://www.candidagenome.org/download/)
+   1) create the folder data at the same dir of the folder configs in the pipeline:
+       $mkdir data
+   2) create the folder named as the reference version in the folder data, such as reference version name is C_auris_B8441:
+       $cd data
+       $mkdir C_auris_B8441
+   3) download reference genome sequence (.fa/.fa.gz) and gene annotation (.gff/.gff.gz) files to the folder C_auris_B8441:
+          you can download C.auris strain B8441 data from http://www.candidagenome.org/download/
+   4) rename the reference files
+       $cd C_auris_B8441
+       $mv <genome_sequence>.fa.gz sequences.fa.gz
+       $mv <annotation>.gff.gz genes.gff.gz  
+
+2. Set snpEff.config
+   1) $cd configs
+   2) Create snpEff.config file if it does not exist:
+         $touch snpEff.config
+   3) $nano snpEff.config
+   4) add the below parameters into the file snpEff.config:
+         
+       # Candida auris genome version and its explanation
+       C_auris_B8441.genome : Candida_auris strain B8441
+       
+       #Databases are stored here
+       # a non-absolute path will be relative to snpEff.config's file dir
+       #
+       data.dir = ../data
+
+
+3. Create database
+   1) go to the top dir of the pipeline. In the top dir, there are the folders data, configs, etc.
+   2) run the command to build the database:
+
+       $singularity exec -B ./:/snpEff/data docker://staphb/snpeff:5.2a snpEff build -gff3 -c ./configs/snpEff.config -v C_auris_B8441 -noCheckCds -noCheckProtein
+
+   Note: if the database is built successfully, you can see some *.bin files in /data/C_auris_B8441/ dir.
+
+4. Do not foget update reference folder in the pipeline. The genome sequence in the folder reference should be the same as the genome sequence that is used to build snpEff database. Such as C.auris strain B8441:
+    1) $cp ./data/C_auris_B8441/sequences.fa.gz ./reference/
+    2) $cd ./reference
+    3) $gzip -d sequences.fa.gz
+    4) $samtools faidx sequences.fa
+    Note: the index file sequences.fa.fai should be generated. So there should be two files (sequences.fa and sequences.fa.fai) in the reference dir. 
+
+
+Note: Annotate snp vcf file:
+      such as $singularity exec -B ./:/snpEff/data docker://staphb/snpeff:5.2a snpEff -c ./configs/snpEff.config -v C_auris_B8441 bc2085_B8441.vcf > ann.vcf
