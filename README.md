@@ -41,7 +41,7 @@ The Kraken2/Bracken Refseq index--PlusPF is needed. Please download PlusPF index
    **db** : the full path to kraken/bracken-database (PlusPF) in your computer. It looks like "/\<the full path to the parent dir of PlusPF foler in your computer\>/PlusPF".    
    **qc** : the full path to LongQC dir in your computer. It looks like "/\<the full path to the parent dir of LongQC foler in your computer\>/LongQC".     
            
-   Note: For HiperGator users, the parameters "db" and "qc" do not need to be changed. Just keep default settings.     
+   **Note: For HiperGator users, the parameters "db" and "qc" do not need to be changed. Just keep default settings.**     
 
 4. get to the top directory of the pipeline, run 
 ```bash
