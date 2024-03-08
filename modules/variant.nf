@@ -13,6 +13,6 @@ process variant {
    bcftools mpileup --op en-prob25 --indel-size 450 --gap-frac 0.01 --ext-prob 1 --min-ireads 3 --max-depth 1000 --max-idepth 5000 --seed 1984 -h 500 -B -a FORMAT/AD -f ${params.reference}/*.fasta ${params.output}/${x}/${x}.mapped.bam | bcftools call -mv -Ov | bcftools norm -f ${params.reference}/*.fasta - | bcftools filter -e 'QUAL < 20' - > ${params.output}/${x}/${x}.variants_bcftools.vcf
 
    #copy vcf file to variants folder
-   cp ${params.output}/${x}/${x}.variants_bcftools.vcf ${params.output}/variants
+   #cp ${params.output}/${x}/${x}.variants_bcftools.vcf ${params.output}/variants
    """
 }

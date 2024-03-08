@@ -1,7 +1,10 @@
-input          : "/<Your path to the directory Pensacola>/pbbams"
-output    : "/<your path to the directory Pensacola>/output"
-reference      : "/<your path to the directory Pensacola>/reference"
+input          : "/blue/bphl-florida/dongyibo/Dev_Candida_PB/git3/pbbams"
+output    : "/blue/bphl-florida/dongyibo/Dev_Candida_PB/git3/output"
+reference      : "/blue/bphl-florida/dongyibo/Dev_Candida_PB/git3/reference"
+snpeffconfig : "/blue/bphl-florida/dongyibo/Dev_Candida_PB/git3/configs"
+
+db    : "/blue/bphl-florida/share/kraken_bracken_database/PlusPF"
+qc    : "/apps/longqc/1.2.0c/LongQC"
 
 
-# Note: The parameter "input" and "output" are the absolute path. Do not include the "/" at the end of the paths.
-
+# Note: The parameters are the absolute path. Do not include the "/" at the end of the paths.
