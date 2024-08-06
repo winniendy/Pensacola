@@ -28,6 +28,7 @@ A = Channel.fromList(sampleNames)
 //A.view()
 
 include { bam2fastq } from './modules/bam2fastq.nf'
+include { assemble } from './modules/assemble.nf'
 include { kraken } from './modules/kraken.nf'
 include { bracken } from './modules/bracken.nf'
 include { pbsmrtlink } from './modules/pbsmrtlink.nf'
@@ -38,5 +39,5 @@ include { snpeff } from './modules/snpeff.nf'
 
 workflow {
    //bam2fastq(A) | pbsmrtlink | statistics | variant | view
-   bam2fastq(A) | kraken | bracken | pbsmrtlink | statistics | variant | snpeff | view
+   bam2fastq(A) | assemble | kraken | bracken | pbsmrtlink | statistics | variant | snpeff | view
 }
