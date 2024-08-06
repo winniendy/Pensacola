@@ -1,5 +1,5 @@
 # Pensacola
-A Nextflow pipeline to analyze *Candida auris* long-sequencing data from PacBio. The QC, species identification and species abundance of a sample, contig assembly, SNP calling and annotation, drug resistance detection *etc* are included in the pipeline.  
+A Nextflow pipeline to analyze *Candida auris* long-sequencing data from PacBio. The QC, species identification and species abundance of a sample, contig assembly, SNP calling and annotation, drug resistance detection, *etc* are included in the pipeline.  
 
 ## Prerequisites
 Nextflow is needed. The detail of installation can be found in https://github.com/nextflow-io/nextflow. For HiPerGator users, its installation is not needed. 
