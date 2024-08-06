@@ -17,14 +17,22 @@ APPTAINER_CACHEDIR=./
 export APPTAINER_CACHEDIR
 
 nextflow run pensacola.nf -params-file params.yaml
-#sort ./output/*/report.txt | uniq > ./output/sum_report.txt
-#sed -i '/sampleID\tspeciesID/d' ./output/sum_report.txt
-#sed -i '1i sampleID\tspeciesID_mash\tnearest_neighb_mash\tmash_distance\tspeciesID_kraken\tkraken_percent\tmlst_scheme\tmlst_st\tmlst_cc\tpmga_species\tserotype\tnum_clean_reads\tavg_readlength\tavg_read_qual\test_coverage\tnum_contigs\tlongest_contig\tN50\tL50\ttotal_length\tgc_content\tannotated_cds' ./output/sum_report.txt
-#rm ./neisseria.txt
-#rm ./hinfluenzae.txt
-
 mv ./*.out ./output
 mv ./*err ./output
+
+#gfa to fa
+mkdir -p ./output/assemble
+cp ./output/*/assemble/*.bp.p_ctg.gfa ./output/assemble
+gfas=`ls ./output/assemble/*.gfa`
+for eachfile in $gfas
+do
+  #echo $eachfile
+  gawk '/^S/{print ">"$2"\n"$3}' $eachfile|fold > ${eachfile}.fa
+done
+
+# drug resistant detect
+python drugres.py
+
 
 dt=$(date "+%Y%m%d%H%M%S")
 mv ./output ./output-$dt
