@@ -49,6 +49,7 @@ The Kraken2/Bracken Refseq index--PlusPF is needed. Please download PlusPF index
 ```bash
 sbatch ./pensacola.sh
 ```
+#### Note: If you want to get email notification when the pipeline running ends, please input your email address in the line "#SBATCH --mail-user=<EMAIL>" in the batch file that you will run (namely, pensacola.sh).       
 
 ## Phylogeny and Molecular Evolution - Optional      
 Pensacola use PhaME_m (https://github.com/BPHL-Molecular/PhaME_m) for phylogeny and molecular evolution of Candida samples. Three phylogenetic trees (FastTree, RaxML, IQ tree) can be generated.       
@@ -82,9 +83,8 @@ sbatch ./phame.sh
 ```     
 7. All phylogeny results can be found in the directory /Phame/test/workdirs/mytest/      
     
-Note: 1. It makes no sense to perform bootstrap with less than 4 sequences.     
-      2. Alignment must have at least 3 sequences.
+8. Note: 1. It makes no sense to perform bootstrap with less than 4 sequences. 2. Alignment must have at least 3 sequences.
 
 
 
-#### Note1: If you want to get email notification when the pipeline running ends, please input your email address in the line "#SBATCH --mail-user=<EMAIL>" in the batch file that you will run (namely, pensacola.sh). 
+ 
