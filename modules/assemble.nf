@@ -7,6 +7,6 @@ process assemble {
         
     """    
     mkdir -p ${params.output}/${x}/assemble/
-    hifiasm -o ${params.output}/${x}/assemble/${x} -t 10 ${params.output}/${x}/${x}.fastq.gz
+    hifiasm -o ${params.output}/${x}/assemble/${x} -t 15 ${params.output}/${x}/${x}.fastq.gz
     """
 }

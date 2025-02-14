@@ -12,10 +12,7 @@ process bam2fastq {
    cp ${params.input}/${x}.bam ${params.output}/${x}
    cp ${params.input}/${x}.bam.pbi ${params.output}/${x}
    
-   #QC
-   python ${params.qc}/longQC.py sampleqc -x pb-sequel -o ${params.output}/${x}/qc ${params.output}/${x}/${x}.bam
-   #fastqc ${params.output}/${x}/${x}_1.fastq.gz ${params.output}/${x}/${x}_2.fastq.gz
-
+ 
    #bam to fastq
    bam2fastq -o ${params.output}/${x}/${x} ${params.output}/${x}/${x}.bam
 

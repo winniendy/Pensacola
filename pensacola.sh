@@ -3,15 +3,15 @@
 #SBATCH --qos=bphl-umbrella
 #SBATCH --job-name=pensacola
 #SBATCH --ntasks=1
-#SBATCH --cpus-per-task=10
+#SBATCH --cpus-per-task=12
 #SBATCH --mem=300gb
 #SBATCH --time=48:00:00
 #SBATCH --output=pensacola.%j.out
 #SBATCH --error=pensacola.err
-#SBATCH --mail-user=<EMAIL>
+#SBATCH --mail-user=yi.huang@flhealth.gov
 #SBATCH --mail-type=FAIL,END
 
-module load nextflow
+module load nextflow/24.04.2
 module load longqc
 APPTAINER_CACHEDIR=./
 export APPTAINER_CACHEDIR

@@ -10,3 +10,5 @@ How to install smrtlink only tools:
 
 3. make sure the command "bam2fastq" working in command line.
 
+https://downloads.pacbcloud.com/public/software/installers/smrtlink-release-sequel2_13.1.0.221970.zip
+
